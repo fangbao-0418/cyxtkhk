@@ -1,0 +1,58 @@
+
+<!-- 添加 && 修改 表单 -->
+<div class="modal fade" id="userList" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title"> 员工管理 </h4>
+      </div>
+      <div class="modal-body">
+        
+        <table class="table table-striped">
+          <tr>
+            <td colspan="4" class="text-right">
+              <button type="button" ng-click="home.addUser()" class="btn btn-primary">+添加</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="active text-center">员工</td>
+            <td class="danger text-center">密码</td>
+            <td class="success text-center">级别</td>
+            <td class="warning text-center">操作</td> 
+          </tr>
+           <tr ng-repeat="x in home.userList.list">
+            <td class="active text-center">{{x.userid}}</td>
+            <td class="danger text-center">{{x.pwd}}</td>
+            <td class="success text-center">{{x.level == 1 ? '高级' : '普通'}}</td>
+            <td class="warning text-center">
+              <a ng-click="home.editUser(x)">修改</a>
+              <a ng-click="home.delUser(x.id)">删除</a>
+            </td> 
+          </tr>
+          <tr>
+            <td colspan="4" class="text-right">
+              <nav>
+                <ul class="pagination">
+                  
+                  <li ng-click="home.userListPage = home.userListPage == 1 ? 1 : home.userListPage-1" ng-class="{'disabled':home.userListPage == 1}"><a href="#">&laquo;</a></li>
+
+                  <li ng-repeat="x in home.userList.pageArr" ng-class="{active: home.userListPage == x } ">
+                    <a ng-click="home.userListPage = x" href="#">{{x}} <span class="sr-only">(current)</span></a>
+                  </li>
+                  
+                  <li ng-click=" home.userListPage = (home.userListPage == home.userList.pageArr.length ) ? home.userListPage : home.userListPage + 1" ng-class="{'disabled':home.userListPage == home.userList.pageArr.length}"><a href="#">&raquo;</a></li>
+
+                </ul>
+              </nav>
+            </td>
+          </tr>
+        </table>
+     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- 添加 && 修改 表单 -->

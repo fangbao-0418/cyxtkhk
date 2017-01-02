@@ -1,0 +1,36 @@
+<header><!--头部-->
+<div class="head">
+    
+    <div class="content">
+        
+        <div class="left_head"><!--左侧-->
+        	<img src="../public/image/logo.png" class="logo" />
+        </div><!--左侧-->
+        
+        <div class="right_head "  ><!--右侧-->
+              <div data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="../public/image/user_img.png" class="user_img" />
+              <span class="info">你好，{{home.userinfo.userid}}</span>
+              </div>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a ng-click="home.showEditPasswd()">修改密码</a>
+                </li>
+                <li ng-if="home.userinfo.level == 1">
+                  <a ng-click="home.showUserList()">员工管理</a>
+                </li>
+                <li>
+                  <a ng-click="home.loginout()">注销</a>
+                </li>
+              </ul>
+
+             <!--  <span class="sign_out" ng-click="home.loginout()">退出</span> -->
+        </div><!--右侧-->
+        
+        
+
+
+    </div>
+
+</div>
+</header><!--头部-->

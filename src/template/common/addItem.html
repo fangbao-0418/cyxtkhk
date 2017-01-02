@@ -1,0 +1,155 @@
+
+<!-- 添加 && 修改 表单 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">{{home.alertTit}}</h4>
+      </div>
+      <div class="modal-body">
+         <form class="form-horizontal" role="form">
+       
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">销售代表</label>
+          <div class="col-sm-9">
+            <input class="form-control" type="text" ng-model="home.item.xsdb" id="formGroupInputDefault" placeholder="{{home.userinfo.userid}}">
+          </div>
+        </div>
+
+    	<div class="form-group">
+    		<label class="col-sm-2 control-label" for="formGroupInputDefault">意向分类</label>
+        	<div class="col-sm-9">
+	         	<select ng-model="home.item.yxfl" class="form-control" >
+	         		<option ng-repeat="x in home.yxfl">{{x.title}}</option>
+				</select>
+			</div>
+		</div>	
+
+		<div class="form-group">
+    		<label class="col-sm-2 control-label" for="formGroupInputDefault">合作情况</label>
+        	<div class="col-sm-9">
+         	  	<select ng-model="home.item.hzqk" class="form-control">
+					<option ng-repeat="x in home.hzqk">{{x.title}}</option>
+				</select>
+			</div>	        
+		</div>	
+
+		 <div class="form-group">
+            <label class="col-sm-2 control-label" for="formGroupInputDefault">合作项目</label>
+            <div class="col-sm-10">
+            	
+            	<label  ng-repeat="x in home.hzxm" class="checkbox checkbox-inline" for="checkbox5a{{$index}}">
+                	<input type="checkbox" ng-model="x.complete"  data-toggle="checkbox" id="checkbox5a{{$index}}" required > {{x.title}}
+            	</label>
+        	 </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">公司名称</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="home.item.company" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          	<label class="col-sm-2 control-label" for="formGroupInputDefault">产品类别</label>
+        	<div class="col-sm-9">
+         	  	<select ng-model="home.item.cplb" class="form-control">
+					       <option ng-repeat="x in home.cplb">{{x.title}}</option>
+				      </select>
+			</div>	     
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">公司地址</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="home.item.address" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">联系人</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="home.item.lxr" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">电话</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="home.item.lxdh" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">手机</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="home.item.mobile" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">邮箱</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="home.item.email" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">QQ</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="home.item.qq" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">微信</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="home.item.weixin" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">洽谈详情</label>
+          <div class="col-sm-9">
+             <textarea class="form-control" ng-model="home.item.qtxq" rows="3">{{home.item.qtxq}}</textarea>
+          </div>
+        </div>
+
+        <div class="form-group" >
+         
+            <table class="table">
+              <tr ng-repeat="x in home.qtxqList.list">
+                 <td class="" width="4%"></td>
+                <td class="" width="78%">{{x.qtxq}}</td>
+                <td class="" width="14%">{{x.addtime | formatDate}}</td>
+                 <td class="" width="4%"></td>
+              </tr>
+              <tr>
+                <td colspan="4">
+                    <nav ng-if="home.qtxqList.pageNum">
+                      <ul class="pager">
+                        <li ng-class="['previous',{'disabled':home.qtxqListPage == 1}]"><a ng-click="home.qtxqListPage = home.qtxqListPage <= 1 ? 1 : home.qtxqListPage - 1" href="#">&larr; 上一页</a></li>
+                        <li ng-class="['next',{'disabled':home.qtxqListPage == home.qtxqList.pageNum}]"><a ng-click="home.qtxqListPage = home.qtxqListPage >= home.qtxqList.pageNum ? home.qtxqList.pageNum : home.qtxqListPage + 1" href="#">下一页 &rarr;</a></li>
+                      </ul>
+                    </nav>
+                </td>
+              </tr>
+            </table>
+         
+        </div>
+
+
+		</div>		        
+
+      </form>
+     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" ng-click="home.saveData(home.item.id)" >提交</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- 添加 && 修改 表单 -->
