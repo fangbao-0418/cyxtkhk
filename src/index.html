@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app="app" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>创意行通信息录入系统</title>
+  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   
+ 
+  <link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.min.css" >
+  <link rel="stylesheet" type="text/css" href="/lib/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" >
+  <link rel="stylesheet" type="text/css" href="/public/css/exhibition.css" >
+  <link rel="stylesheet" type="text/css" href="/public/css/app.css" >
+  <link rel="stylesheet" type="text/css" href="/public/css/bootstrap.css" >
+
+
+  <base href="/">
+</head>
+<body>
+
+  <div ng-if="!isFull" my-header ></div>
+
+
+  <!-- 头部 -->
+  <div ui-view >
+  </div>
+ 
+  <!-- 弹框提醒 -->
+  <div my-alert message="alertMessage"></div>
+
+
+<footer><!--页脚-->
+    <div class="foot">
+        你现在登录的是<span> 创意行通客户管理系统 </span>
+    </div>
+</footer><!--页脚-->
+
+
+          
+</body>
+
+  <script type="text/javascript" src="/lib/jquery/jquery-1.8.3.min.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+  <script type="text/javascript" src="/lib/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+ 
+
+</html>

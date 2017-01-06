@@ -1,0 +1,33 @@
+/**
+  * 下拉宽度
+  */
+.select{
+  min-width: 0;
+}
+.select2-drop{
+  min-width: 0;
+}
+
+.search-text{
+  float:left;
+}
+
+
+/**
+  * 下拉宽度
+  */
+.form-group .select {
+     width: auto; 
+}
+
+/**
+  * 公共部分
+  */
+.radio + .radio, .checkbox + .checkbox {
+     margin-top: 0; 
+}
+
+.form-horizontal .form-group {
+    margin-left: -16px;
+    margin-right: -1px;
+}

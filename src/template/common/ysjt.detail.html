@@ -1,0 +1,117 @@
+
+<!-- 添加 && 修改 表单 -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">{{vm.alertTit}}</h4>
+      </div>
+      <div class="modal-body">
+         <form class="form-horizontal" role="form">
+       
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">姓名</label>
+          <div class="col-sm-9">
+            <input class="form-control" type="text" ng-model="vm.item.name" id="formGroupInputDefault" >
+          </div>
+        </div>
+
+    	<div class="form-group">
+    		<label class="col-sm-2 control-label" for="formGroupInputDefault">性别</label>
+        	<div class="col-sm-9">
+	         	<select ng-model="vm.item.sex" class="form-control" >
+	         		<option ng-repeat="x in vm.sex">{{x.title}}</option>
+				</select>
+			</div>
+		</div>	
+
+		<div class="form-group">
+    	<label class="col-sm-2 control-label" for="formGroupInputDefault">身份证号</label>
+      <div class="col-sm-9">
+        <input class="form-control" type="text" ng-model="vm.item.identity" id="formGroupInputDefault" >   	  	 
+			</div>	        
+		</div>	
+
+		 <div class="form-group">
+            <label class="col-sm-2 control-label" for="formGroupInputDefault">学历情况</label>
+            <div class="col-sm-10">
+            	 <input class="form-control" type="text" ng-model="vm.item.xlqk" id="formGroupInputDefault" >      
+        	 </div>
+        </div>
+
+       <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">籍贯</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="vm.item.jiguan" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">公司名称</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="vm.item.company" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+        <div class="form-group">
+          	<label class="col-sm-2 control-label" for="formGroupInputDefault">单位职务</label>
+        	<div class="col-sm-9">
+         	  <input class="form-control" ng-model="vm.item.dwzw" type="text" id="formGroupInputDefault" placeholder="">
+			</div>	     
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">手机号码</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="vm.item.mobile" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">邮箱</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="vm.item.email" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">通讯地址</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="vm.item.address" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">期次</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="vm.item.nper" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">培训时间</label>
+          <div class="col-sm-9">
+             <textarea class="form-control" ng-model="vm.item.pxsj" id="formGroupInputDefault" placeholder=""></textarea>
+          </div>
+        </div>
+
+         <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">培训专业</label>
+          <div class="col-sm-9">
+            <input class="form-control" ng-model="vm.item.pxzy" type="text" id="formGroupInputDefault" placeholder="">
+          </div>
+        </div>
+
+		</div>		        
+
+      </form>
+     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" ng-click="vm.saveData(vm.item.id)" >提交</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- 添加 && 修改 表单 -->

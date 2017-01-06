@@ -1,0 +1,105 @@
+*{margin:auto;padding:0px;list-style:none; }
+body{ font:normal 12px/22px Microsoft Yahei; background: #F5F5F5}
+.login_body{background: url("../image/login_bg.jpg") no-repeat center;background-position-y: 0px;position: absolute;width:100%;min-height:980px;}
+
+*:focus {outline:none}
+img{ border:none; outline-width:0px;  vertical-align:top; }
+a{ text-decoration:none; color:#333; font-size:12px;  }
+a:hover{ color:#1974A1; }
+.over_ellipsis{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+.cf{clear:both;}
+.cf::before, .cf::after{content:""; display:table;}
+.cf::after {clear:both;}
+.cf::before, .cf::after { content:""; display:table;}
+
+
+/* 登录页css */
+.login_bg{}
+.log_body{ width:490px; height:344px; position:relative;top:313px;}
+.log_form {box-sizing: content-box;height:158px; width:335px; padding-left:192px; padding-top:69px; background:url(../image/login_inp_bg.png) no-repeat; position:relative; left:-35px; margin-top:15px; margin-bottom:15px;}
+.log_form input.inp{ width:240px; height:28px; line-height:28px; padding-left:5px; padding-right:5px; margin-bottom:15px; background:#fdfdfd; border:1px solid #dbdbdb; background:url(../image/input.jpg) no-repeat;}
+.submit{ background:url(../image/submit.jpg) no-repeat; width:252px; height:30px; border-style:none;}
+.log_foot{ color:#ffffff; text-align:center;}
+.log_foot span{color:#f0ff00;}
+
+
+/* 首页css */
+.head{ background-color:#2c3544; line-height:53px; height:83px; padding:13px 0; position:fixed; width:100%; top:0; z-index:90;}
+.foot{ position: fixed; width: 100%; bottom: 0;background-color:#2c3544; color:#fff; text-align:center; height:42px; line-height:42px; border-bottom:1px solid #3c4452; border-top:1px solid #3c4452;}
+.foot span{ color:#00a9ff;}
+.content{ width:1200px; margin:0px auto;}
+.head span.tit{color:#fff; float:left;}
+.logo{ float:left; margin-right:55px;}
+.head .inp{ width:130px; height:25px; line-height:25px; border:none; padding:0 5px; margin-right:5px; float:left; font-size:12px;}
+.right_head{ text-align:right;float:right; cursor:pointer; line-height:55px;height:55px;position:relative;}
+
+.left_head{ float:left;}
+.right_head .info{ color:#fff; font-size:18px;}
+.adduser{width:111px; height:23px; border-right:2px solid #000;  border-bottom:2px solid #000; border-top:none; border-left:none; background:#fff url(../image/icon.png) no-repeat scroll 104px 0px; cursor:pointer; margin-right:30px;}
+.search{width:43px; height:24px; border:1px solid #ffffff; background-color:#00a9ff; color:#ffffff; cursor:pointer; margin-top:1px;}
+.sign_out{ color:#fff;margin-left:20px; background:url(../image/icon.png) no-repeat scroll 0px  -56px;padding-left: 20px;display: inline-block;}
+.user_img{ margin-right:15px;}
+.cont{ width:1200px;margin-top:79px; margin-bottom:50px;}
+.exh_tab_tit{border-collapse:collapse; text-align:center; table-layout:fixed; word-break:break-all; background-color:#eee; font-size:14px; color:#333333; height:49px; }
+
+.exh_tab{border-collapse:collapse; text-align:center; table-layout:fixed; word-break:break-all; margin-bottom:30px; margin-top:127px; }
+.exh_tab_tit tr th{border:1px solid #ccc; height:40px; text-align: center;}
+.exh_tab_tit tr td{border:1px solid #ccc; height:40px;}
+.exh_tab tr td{border:1px solid #97bacd; height:40px;}
+.exh_tab tr td input.but{ border-style:none; border:1px solid #2c3544; height:23px; line-height:20px; width:40px; cursor:pointer;}
+
+.modify_inp{ background-color:#f1f1f1; border:1px solid #c3c3c3; height:23px; line-height:23px; padding:0 3px;}
+.inp1{ width:220px;}
+.inp2{ width:70px;}
+.inp3{ width:70px;}
+.inp4{ width:170px;}
+.inp5{ width:170px;}
+.inp6{ width:220px;}
+
+.intent1{ color:#1CA800}
+.intent2{ color:#CC0000}
+.intent3{ color:#1F89F5}
+.intent4{ color:#EB8104}
+.intent5{ color:#000000}
+
+
+/*  下拉表单样式 */
+.select_div {cursor:pointer; font-size:12px; width:110px; margin-right:10px; background:#FFF; height:25px; line-height:25px;  position:relative; color:#666; float:left; margin-top:14px; z-index:99;  }
+.intention_sel{ width:99px;}
+.select_div .tit{ padding:0 10px; background:url(../image/icon.png) no-repeat scroll 95px -30px;}
+.intention_sel .tit{ background-position:84px -30px;}
+.select_div ul{ border-left:1px solid #d3d3d3; border-bottom:1px solid #d3d3d3; border-right:1px solid #d3d3d3; max-height:180px; overflow:auto; display:none; background-color:#ffffff; }
+.select_div ul li:hover{background:#F6F6F6; color:#000;}
+.select_div ul li{margin:auto; padding:0 10px;}
+
+
+
+.page_div{text-align:center; font-size:14px; height:40px;}
+.page{margin-right:20px;}
+.page a{text-decoration:none;display:inline-block; background-color:#667987;  color:#ffffff; height:26px; line-height:26px; margin:0 2px;  text-align:center;
+text-decoration:none; width:27px;}
+.page a.unclick,.page a.unclick:hover{background:none; border:1px solid #eee; color:#999;cursor:default;}
+.page a{border:3px #fff double;}
+.tcdPageCode span.current{display:inline-block; height:25px; line-height:25px; padding:0 10px; margin:0 2px; color:#fff; background-color:#12b6f3; border: 1px solid #12b6f3; vertical-align:middle;}
+.tcdPageCode span.disabled{display:inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;	color: #bfbfbf;background: #f2f2f2;border: 1px solid #bfbfbf;vertical-align: middle;}
+.page_number{border:1px solid #e4e4e4; width:20px; height:20px; margin: 0 5px; padding:2px 5px; line-height:20px;}
+.page_total{width:61px; height:26px; border:1px solid #e4e4e4; position:relative; text-align:center; padding:3px 25px; border:3px  #fff double; background-color:#667987; color:#fff;}
+.page_total a{ color:#ffff00; font-weight:bold; font-size:12px;}
+.page .ellipsis{text-decoration:none;display:inline-block;color:#242424; height:26px; line-height:26px; margin:0 2px;  text-align:center;
+text-decoration:none; width:27px; border:1px solid #e4e4e4; font-size:12px;}
+.page a.on{color:#fff;}
+
+.blue_page .page a.on{ background-color:#c71312; border:1px solid #eee; }
+.blue_page .page a:hover,.blue_page .page a.on{border:3px  #fff double;}
+
+
+/**
+  * 搜索部分
+  */
+.search-main{
+	
+}
+
+
+

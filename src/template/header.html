@@ -1,0 +1,45 @@
+<header><!--头部-->
+<div class="head">
+    
+    <div class="content">
+        
+        <div class="left_head"><!--左侧-->
+        	<img src="../public/image/logo.png" class="logo" />
+        </div><!--左侧-->
+        
+        <div class="right_head "  ><!--右侧-->
+              <div data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="../public/image/user_img.png" class="user_img" />
+              <span class="info">你好，{{userinfo.userid}}</span>
+              </div>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li>
+                  <a ng-click="vm.showEditPasswd()">修改密码</a>
+                </li>
+                <li ng-if="userinfo.level == 1">
+                  <a ng-click="vm.showUserList()">员工管理</a>
+                </li>
+                <li>
+                  <a ui-sref="index">合作库</a>
+                </li>
+                <li ng-if="userinfo.level == 1">
+                  <a ui-sref="ysjt">药商讲堂</a>
+                </li>
+                <li>
+                  <a ng-click="vm.loginout()">注销</a>
+                </li>
+              </ul>
+             <!--  <span class="sign_out" ng-click="home.loginout()">退出</span> -->
+        </div><!--右侧-->
+    </div>
+</div>
+</header><!--头部-->
+
+<!-- 密码修改界面myEditPasswd -->
+<div ng-include="'/template/common/my.edit.passwd.html'"></div>
+
+<!-- 员工列表 -->
+<div ng-if="vm.userinfo.level == 1" ng-include="'/template/common/userList.html'"></div>
+
+<!-- 员工信息模板 -->
+<div ng-if="vm.userinfo.level == 1" ng-include="'/template/common/userInfo.html'"></div>

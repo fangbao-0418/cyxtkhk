@@ -1,0 +1,91 @@
+/* styles in src/style directory are applied to the whole page */
+
+
+/**
+ *  user-select
+ *  鼠标选中文字功能禁止
+ */
+
+body{
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+
+/**
+  * 公共样式
+  */
+.w110{
+  width:110px;
+} 
+.w170{
+  width:170px;
+}
+.w500{
+  width:500px;
+}
+.fl{
+  float:left;
+}
+.fr{
+  float:right;
+}
+.mt6{
+  margin-top: 6px;
+}
+
+
+/**
+  * 日期选择器
+  */
+.date-select{
+  float:left;
+  height: 50px;
+  line-height: 50px;
+}
+.form_datetime ,.to_datetime{
+  display: inline;
+  position:relative;
+}
+.form_datetime .add-on,.to_datetime .add-on{
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+ 
+/**
+  * 搜索
+  */
+.search-main{
+  padding-top:20px;
+  width:100%;
+  display: inline-block;
+  margin-bottom:0;
+}
+.search-main li{
+  float: left;
+  width: 100%;
+  padding:5px 0;
+}
+.search-main li .item-title{
+  margin-right:10px;
+}
+.search-item{
+  display: inline-block;
+  margin-top:10px;
+  margin-left:20px;
+}   
+
+/**
+  * 添加信息
+  */
+.operation{margin-bottom:10px;width:100%;float:left;}
+.operation .adduser{
+  color:#000;
+  font-size: 12px;
+}
+
+ 

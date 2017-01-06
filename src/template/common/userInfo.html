@@ -1,0 +1,49 @@
+
+<!-- 员工账号管理 -->
+<div class="modal fade" id="userInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title"> {{vm.userItemTitle}} </h4>
+      </div>
+      <div class="modal-body">
+         <form class="form-horizontal" role="form">
+       
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">用户名</label>
+          <div class="col-sm-6">  
+            <input ng-if="vm.userItem.id" readonly class="form-control" type="text" ng-model="vm.userItem.userid" id="formGroupInputDefault" >
+            <input ng-if="!vm.userItem.id" class="form-control" type="text" ng-model="vm.userItem.userid" id="formGroupInputDefault" >
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">级别</label>
+          <div class="col-sm-6">
+            <select ng-model="vm.userItem.level" class="form-control">
+              <option value="2">普通</option>
+              <option value="1">高级</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="formGroupInputDefault">密码</label>
+          <div class="col-sm-6">
+            <input class="form-control" type="text" ng-model="vm.userItem.pwd" id="formGroupInputDefault" >
+          </div>
+        </div>
+
+		    </div>		        
+
+      </form>
+     
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" ng-click="vm.saveUserItem(vm.userItem.id)" >提交</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!-- 添加 && 修改 表单 -->

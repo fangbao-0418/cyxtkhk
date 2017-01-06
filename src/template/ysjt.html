@@ -1,0 +1,106 @@
+ 	<div class="cont">
+		  
+			<ul  class="search-main">
+				<li class="row">
+					<div class="form-group col-xs-4">
+			       <div class="input-group">
+              <div class="input-group-addon">录入时间</div>
+  						<div class="input-append date form_datetime fl">
+  						    <input size="16" type="text" class="form-control" >
+  						    <span class="add-on"><i class="icon-th"></i></span>
+  						</div>
+              <div class="input-group-addon">~</div>
+              <div class="input-append date to_datetime fl">
+                  <input size="16" type="text" class="form-control" >
+                  <span class="add-on"><i class="icon-th"></i></span>
+              </div>
+             </div> 
+          </div>   
+		      
+          <div class="form-group col-xs-2" >
+              <div class="input-group">
+              <span type="button" class="input-group-addon" >
+                期次
+              </span>
+              <input type="text" ng-model="vm.where.nper" class="form-control">
+             </div> 
+            </div>
+
+            
+            <div class="form-group col-xs-4" >
+              <div class="input-group">
+              <span type="button" class="input-group-addon" >
+                关键词
+              </span>
+              <input type="text" ng-model="vm.where.kw" class="form-control">
+             </div> 
+            </div>
+            <button type="button" ng-click="vm.goSearch()" class="btn btn-primary">查找</button>
+            <button type="button" class="btn btn-default" ng-click="vm.reset()">重置</button>
+
+				</li>
+      
+				
+			</ul>
+		  <div class="operation">
+
+		  		<input class="adduser fr" type="button" value="添加信息" ng-click="vm.addData()" >
+		  </div> 
+          <table width="100%"  border="1"  class="exh_tab_tit">
+            <tr class="tit">
+              <th width="10%">ID</th>
+              <th width="8%">姓名</th>
+              <th width="5%">性别</th>
+              <th width="17%">身份证号</th>
+              <th width="10%">籍贯</th>
+              <th width="25%">企业名称</th>
+              <th width="10%">单位职务</th>
+              <th width="10%">期次</th>
+              <th width="5%" >操作</th>
+            </tr>
+            
+            <tr ng-if="vm.dataItems" ng-repeat="x in vm.dataItems">
+                <td>{{x.id}}</td>
+                <td>{{x.name}}</td>
+                <td>{{x.sex}}</td>
+                <td>{{x.identity}}</td>
+                <td>{{x.jiguan}}</td>
+                <td>{{x.company}}</td>
+                <td>{{x.dwzw}}</td>
+                <td>{{x.nper}}</td>  
+            	<td>
+                <span class="glyphicon glyphicon-pencil" ng-click="vm.editData(x)" ></span>
+               
+              </td>
+            </tr>
+          
+           
+          </table>
+          
+          <div class="row" style="padding:10px 0">   
+            <button ng-if="vm.showLoadData" type="button" ng-click="vm.loadData()" class="btn btn-primary" style="margin:0 auto;display: block;">加载数据</button>
+          </div>
+          <div style="clear:both;"></div>
+	</div>
+
+<div style="clear:both; height:1px;"></div>
+<div class="blue_page page_div"><!--分页-->
+  	 
+    <div style="clear:both;"></div>
+</div><!--分页-->
+
+
+    
+    
+<footer><!--页脚-->
+    <div class="foot">
+        你现在登录的是<span> 创意行通客户管理系统 </span>
+    </div>
+</footer><!--页脚-->
+
+
+<!-- 添加修改信息 -->
+<div ng-include="'/template/common/ysjt.detail.html'"></div>
+
+
+ 

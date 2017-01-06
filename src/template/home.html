@@ -1,0 +1,142 @@
+
+        
+	<div class="cont">
+		  
+			<ul  class="search-main">
+				<li class="row">
+					<div class="form-group col-xs-4">
+			       <div class="input-group">
+              <div class="input-group-addon">录入时间</div>
+  						<div class="input-append date form_datetime fl">
+  						    <input size="16" type="text" class="form-control" >
+  						    <span class="add-on"><i class="icon-th"></i></span>
+  						</div>
+         
+              <div class="input-group-addon">~</div>
+              <div class="input-append date to_datetime fl">
+                  <input size="16" type="text" class="form-control" >
+                  <span class="add-on"><i class="icon-th"></i></span>
+              </div>
+             </div> 
+          </div>   
+		      
+           <div class="form-group col-xs-2">
+            <div class="input-group">
+              <div class="input-group-addon">合作情况</div>
+
+             <select ng-model="home.where.hzqk" class="form-control">
+                 <option ng-repeat="x in home.hzqk">{{x.title}}</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group col-xs-6">
+             <div class="input-group">
+              <div class="input-group-addon">合作项目</div>
+              <div class="form-control" >
+              <span ng-repeat="x in home.hzxm" for="checkbox5a{{$index}}">
+                  <input type="checkbox" ng-model="x.complete"  data-toggle="checkbox" id="checkbox5a{{$index}}" required > {{x.title}}
+              </span>
+            </div>
+          </div>
+
+
+				</li>
+        <li class="row">
+           <div class="form-group col-xs-2">
+            <div class="input-group">
+              <div class="input-group-addon">意向分类</div>
+              <select ng-model="home.where.yxfl" class="form-control">
+                <option ng-repeat="x in home.yxfl">{{x.title}}</option>
+              </select>
+            </div>  
+          </div>
+
+          <div class="form-group col-xs-3">
+              <div class="input-group">
+                <div class="input-group-addon">产品类别</div>
+                <select ng-model="home.where.cplb" class="form-control">
+                   <option ng-repeat="x in home.cplb">{{x.title}}</option>
+                </select>
+              </div>
+          </div>
+
+            <div class="form-group col-xs-4" >
+              <div class="input-group">
+              <span type="button" class="input-group-addon" >
+                关键词
+              </span>
+              <input type="text" ng-model="home.where.kw" class="form-control">
+             </div> 
+            </div>
+               <button type="button" ng-click="home.goSearch()" class="btn btn-primary">查找</button>
+            <button type="button" class="btn btn-default" ng-click="home.reset()">重置</button>
+         
+      
+        </li>
+				
+			</ul>
+		  <div class="operation">
+		  		<input class="adduser fr" type="button" value="添加客户信息" ng-click="home.addData()" >
+		  </div> 
+          <table width="100%"  border="1"  class="exh_tab_tit">
+            <tr class="tit">
+              <th width="10%" >ID</th>
+              <th width="10%" >添加时间</th>
+              <th width="10%">销售代表</th>
+              <th width="10%">联系人</th>
+              <th width="25%">公司名称</th>
+              <th width="10%">经营产品类别</th>
+              <th width="10%">意向分类</th>
+              <th width="10%">是否合作</th>
+              <th width="5%" >操作</th>
+            </tr>
+            
+            <tr ng-if="home.dataItems" ng-repeat="x in home.dataItems">
+                <td>{{x.id}}</td>
+                <td>{{x.addtime | formatDate}}</td>
+                <td>{{x.xsdb}}</td>
+                <td>{{x.lxr}}</td>
+                <td>{{x.company}}</td>
+                <td>{{x.cplb}}</td>
+                <td>{{x.yxfl}}</td>
+                <td>{{x.hzqk}}</td>  
+            	<td>
+                <span class="glyphicon glyphicon-pencil" ng-click="home.editData(x)" ></span>
+               
+              </td>
+            </tr>
+          
+           
+          </table>
+          
+          <div class="row" style="padding:10px 0">   
+            <button ng-if="home.showLoadData" type="button" ng-click="home.loadData()" class="btn btn-primary" style="margin:0 auto;display: block;">加载数据</button>
+          </div>
+          <div style="clear:both;"></div>
+	</div>
+
+<div style="clear:both; height:1px;"></div>
+<div class="blue_page page_div"><!--分页-->
+  	 
+    <div style="clear:both;"></div>
+</div><!--分页-->
+
+
+    
+    
+<footer><!--页脚-->
+    <div class="foot">
+        你现在登录的是<span> 创意行通客户管理系统 </span>
+    </div>
+</footer><!--页脚-->
+
+
+<!-- 添加修改信息 -->
+<div ng-include="'/template/common/addItem.html'"></div>
+
+
+
+
+
+
