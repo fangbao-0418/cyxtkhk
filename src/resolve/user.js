@@ -9,12 +9,12 @@ var injector = angular.injector(['ng']),
 
 var resolve = {
 	getUserInfo:function(){
-		return http({
-	      method:"get",
-	      url:apiConfig.user + "/userinfo",
-	      params:{token:localStorage.token},
-	      headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8' },
-	    })
+		// return http({
+	 //      method:"get",
+	 //      url:apiConfig.user + "/userinfo",
+	 //      params:{token:localStorage.token},
+	 //      headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8' },
+	 //    })
 	}
 }
 module.exports = resolve;
