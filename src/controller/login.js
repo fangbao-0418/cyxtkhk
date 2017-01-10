@@ -10,7 +10,9 @@ class Login {
 	}	
 	login(){
 		$.post(apiConfig.user,this.data,(res)=>{
+		
 			if(res.status == "ok"){
+				console.log(2);
 				localStorage.token = res.token; 
 				this.$state.go("index");
 			}else{

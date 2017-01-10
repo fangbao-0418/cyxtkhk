@@ -1,6 +1,6 @@
 
-const host = "http://192.168.1.10";
-const api_path = "/zhoa/api";
+const host = "http://www.bao-ru.com/index.php";
+const api_path = "/Khk";
 export default {
 	user: host + api_path + "/user",
 	editPasswd: host + api_path + "/user/editPasswd",
