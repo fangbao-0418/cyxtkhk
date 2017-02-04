@@ -3,3 +3,4 @@ dist
 coverage
 客户资源
 数据库系统需求
+/src/template/common/myEditPasswd.html

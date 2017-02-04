@@ -188,7 +188,7 @@ class Home {
             _this.dataItems.push(res.data.list[x]);
           }
         }else{
-          this.alertText = "抱歉暂无更多数据！";   
+          this.$rootScope.alertMessage = "抱歉暂无更多数据！";   
           $('#alert').modal('show');
         }
       

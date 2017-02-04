@@ -45,7 +45,7 @@ module.exports = function makeWebpackConfig () {
 
     // Output path from the view of the page
     // Uses webpack-dev-server in development
-    publicPath: isProd ? '/' : 'http://192.168.1.15:8082/',
+    publicPath: isProd ? '/' : 'http://192.168.1.104:8082/',
 
     // Filename for entry points
     // Only adds hash in build mode

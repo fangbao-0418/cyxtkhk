@@ -4,7 +4,7 @@
   "description": "A workflow for Angular made with Webpack",
   "scripts": {
     "build": "webpack --bail --progress --profile",
-    "server": "webpack-dev-server --host 192.168.1.15 --port 8082 --history-api-fallback --progress",
+    "server": "webpack-dev-server --host 192.168.1.104 --port 8082 --history-api-fallback --progress",
     "test": "karma start",
     "test-watch": "karma start --auto-watch --no-single-run",
     "start": "npm run server"
